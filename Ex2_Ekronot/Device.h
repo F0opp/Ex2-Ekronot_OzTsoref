@@ -34,9 +34,9 @@ public:
 
 private:
 
-	unsigned int userId;
+	unsigned int deviceId;
 	DeviceType deviceType;
-	std::string userOS;
+	std::string deviceOS;
 	bool active;
 };
 
