@@ -13,7 +13,15 @@ void User::clear()
 	userID = 0;
 	userAge = 0;
     userName = "";
-	userDevices.clear();
+
+    if (userDevices.get_first() != nullptr)
+    {
+        DeviceType type = userDevices.get_first()->get_data().getType();
+        if (type == DeviceType::PHONE || type == DeviceType::PC || type == DeviceType::LAPTOP || type == DeviceType::TABLET)
+        {
+            userDevices.clear();
+        }
+    }
 }
 
 unsigned int User::getID() const

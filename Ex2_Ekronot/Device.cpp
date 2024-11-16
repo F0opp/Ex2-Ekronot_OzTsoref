@@ -70,6 +70,7 @@ output: none
 */
 void Device::init(unsigned int id, DeviceType type, std::string os)
 {
+	Device newDevice;
 	deviceId = id;
 	deviceType = type;
 	deviceOS = os;
